@@ -111,8 +111,8 @@ shinyServer(function(input, output) {
     # Create a reactive color palette
   colorpal <- reactive({
     datause <- dfch[,grep(options$choose, colnames(dfch))]
-    if(input$analysis==1){pal <- colorBin("Blues", datause, bins=quantile(datause), na.color="#B0171F")}
-    else {pal <- colorBin("Greens", datause, bins=quantile(datause), na.color="#B0171F")}
+    if(input$analysis==1){pal <- colorBin("Blues", datause, bins=quantile(datause, na.rm=T), na.color="#B0171F")}
+    else {pal <- colorBin("Greens", datause, bins=quantile(datause, na.rm=T), na.color="#B0171F")}
   })
     # Generate the basemap
   output$valuesMap <- renderLeaflet({
