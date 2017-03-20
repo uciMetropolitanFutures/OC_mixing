@@ -4,3 +4,6 @@
 # Owner: Kevin Kane (ktkane@uci.edu, kevin@kevinkane.org)
 
 # Created September 2016
+
+# This application is currently hosted at:
+# shiny.datascience.uci.edu/uciMetropolitanFutures/OC_mixing
